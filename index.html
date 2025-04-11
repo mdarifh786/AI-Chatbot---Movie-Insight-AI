@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Insight AI</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="icon.png">
+  <!-- Add this new section -->
+  <div class="website-header">
+      <img src="movie-ai-logo.png" alt="Movie Insight AI" class="website-logo" width="40" height="40">
+      <h1 class="website-title">Movie Insight AI</h1>
+  </div>
+</head>
+<body>
+  <div class="main-container">
+    <div class="sidebar animated-sidebar">
+      <div class="toggle-container">
+          <div class="sidebar-toggle">☰</div>
+          <span class="toggle-text">Recent Searches</span>
+      </div>
+      <div class="logo animated-logo"></div>
+      <div class="chat-history">
+          <ul id="history-list"></ul>
+      </div>
+      <div class="description-container">
+        <div class="description">
+            <p class="fade-in">Your smart movie analyst!</p>
+            <p class="fade-in delay-1">Get breakdowns on plots, actors, reviews & more.</p>
+            <p class="fade-in delay-2">Type any title & let the magic begin! 🍿</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-header">🎬 Start Chatting About Movies</div>
+      <div class="chat-box" id="chat-box"></div>
+      <div class="chat-input">
+        <button class="refresh-button" onclick="refreshPage()">Clear</button>
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button class="send" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
